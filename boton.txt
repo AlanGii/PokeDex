@@ -1,0 +1,8 @@
+  
+  <!--Para hacer un botton-->
+  <!--
+  <label for="nombrePokemon">Pokemon: </label>
+  <input @change=${this.nomPokemon} type="text" id="nombrePokemon" size="10">
+  <button @click=${this.pokemones}>buscar</button>
+  -->
+  

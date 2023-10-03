@@ -1,0 +1,40 @@
+  render() {
+    return html`
+
+      <ul>${this.pokemon.abilities?.map((pokedata) =>
+
+        html`
+        <li>${pokedata.ability.name}</li>
+        `
+        )}
+        <li>${this.pokemon.base_experience}</li>
+      </ul>
+      
+      <ul>${this.pokemon.game_indices?.map((pokedata) =>
+        html`
+        <li>${pokedata.game_index}</li>
+        `
+        )}
+
+      </ul> 
+    `;
+  }
+}
+
+
+<label class="Header-color">Poke</label>
+<label class="Header-color-final">Dex</label>
+
+<div class="Pokemon">
+<ul>${this.pokeData.map(data =>
+  html`
+  <li class= "Tablon">${data.name}</li>
+  `
+    )}
+</ul>
+</div>
+
+
+if elegante pero en js
+(data.abilities.length-1 === i) ? ` ${current.ability.name}` : ` ${current.ability.name},`
+nota: aqui no se usa el if forzosamente y el signo de iterrogacion es el si y los dos punto el eclipse

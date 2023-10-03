@@ -1,0 +1,9 @@
+Consumo de api
+    fetch(`${pokedata.url}`)
+    .then(response => response.json())
+    .then(dataP => {
+     console.log(dataP)
+     this.pokeData.push(dataP);
+    }).catch((e)=>{
+      console.error("La api esta fallandos")
+    }); 

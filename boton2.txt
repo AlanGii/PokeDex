@@ -1,0 +1,12 @@
+  nomPokemon(eve){
+    //console.log(eve.target.value);//para ver el valor que incluye
+    this.entrada = eve.target.value //con esto guardo en una propiedad el valor del input(caja de texto )
+
+  }
+
+
+  nomPokemon(eve){
+    //console.log(eve.target.value);//para ver el valor que incluye
+    this.entrada = eve.target.value //con esto guardo en una propiedad el valor del input(caja de texto )
+
+  }

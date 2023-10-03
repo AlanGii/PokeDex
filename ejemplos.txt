@@ -1,0 +1,52 @@
+import { LitElement, html, css } from 'lit';
+
+const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
+
+class MayWebApplication extends LitElement {
+  static properties = {
+    pokemon:{
+      type:Object
+    }
+  }
+
+  static styles = css`
+    .pokemons{
+    }
+  `;
+
+
+  constructor() {
+    super();
+    this.pokemones();
+    this.pokemon = {};
+  }
+
+
+  pokemones(){
+
+    fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      this.pokemon = data;
+    });//es un return implicito 
+
+
+  }
+
+  render() {
+    return html`
+
+      <ul>${this.pokemon.abilities?.map((movimiento) =>
+        html`
+        <li>${movimiento.ability.name}</li>
+        
+        `
+        )};
+      </ul>
+      
+    `;
+  }
+}
+
+customElements.define('may-web-application', MayWebApplication);
