@@ -56,7 +56,6 @@ class MayWebApplication extends LitElement {
     }
     .Tablon_image{
       padding-left: 10px;
-
     }
 
   `;
